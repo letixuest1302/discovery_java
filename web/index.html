@@ -11,22 +11,15 @@
       background: #ffc5d3;
       text-align: center;
     }
-    h1 {
-      color: #550000;
-      font-size: 3.5em;
-      margin-top: 60px;
-    }
-    p {
-      font-size: 1.2em;
-    }
-    .btn, .card a {
-      display: inline-block;
-      margin: 20px;
-      padding: 12px 25px;
+    h1 { color: #550000; font-size: 3.5em; margin-top: 60px; }
+    p { font-size: 1.2em; }
+    .nav a {
+      margin: 10px;
+      padding: 10px 20px;
       background: #550000;
       color: white;
       text-decoration: none;
-      border-radius: 25px;
+      border-radius: 20px;
     }
     .card {
       background: white;
@@ -37,9 +30,8 @@
       cursor: pointer;
       transition: transform 0.2s;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
+    .card:hover { transform: translateY(-5px); }
+    .card a { color: white; text-decoration: none; display: block; }
   </style>
 </head>
 <body>
@@ -47,8 +39,10 @@
 <h1>Holy Pacce Runners</h1>
 <p>Empieza tu vida conectando y moviéndote</p>
 
-<!-- Botón a la página de propósito -->
-<a href="motivo.html" class="btn">Nuestro propósito</a>
+<div class="nav">
+  <a href="motivo.html">Nuestro propósito</a>
+  <a href="recorrido.html">Recorrido 5K</a>
+</div>
 
 <div class="card">
   <h2>📅 Día: Martes</h2>
@@ -58,7 +52,6 @@
   <h2>⏰ Hora: 6:45 AM</h2>
 </div>
 
-<!-- Cuadro 5 KM con link al recorrido -->
 <div class="card">
   <a href="recorrido.html">🏃 5 KM</a>
 </div>

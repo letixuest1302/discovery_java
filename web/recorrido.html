@@ -11,11 +11,7 @@
       background: #ffc5d3;
       text-align: center;
     }
-    h1 {
-      color: #550000;
-      margin-top: 40px;
-      font-size: 2.8em;
-    }
+    h1 { color: #550000; margin-top: 40px; font-size: 2.8em; }
     .map-container {
       width: 90%;
       height: 500px;
@@ -24,21 +20,24 @@
       overflow: hidden;
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     }
-    a {
-      display: inline-block;
-      margin: 20px;
-      padding: 12px 25px;
+    .nav a {
+      margin: 10px;
+      padding: 10px 20px;
       background: #550000;
       color: white;
       text-decoration: none;
-      border-radius: 25px;
-      font-size: 1.1em;
+      border-radius: 20px;
     }
   </style>
 </head>
 <body>
 
 <h1>Recorrido 5 K – Parque del Retiro y Puerta de Alcalá</h1>
+
+<div class="nav">
+  <a href="index.html">Inicio</a>
+  <a href="motivo.html">Nuestro propósito</a>
+</div>
 
 <div class="map-container">
   <iframe 
@@ -50,8 +49,6 @@
     loading="lazy">
   </iframe>
 </div>
-
-<a href="index.html">← Volver</a>
 
 </body>
 </html>
