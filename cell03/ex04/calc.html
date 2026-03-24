@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Piscine</title>
+    <style>
+        /* Estilo básico para que no se vea desordenado */
+        body { font-family: sans-serif; padding: 20px; }
+        input, select { margin: 5px; padding: 5px; }
+    </style>
+</head>
+<body>
+
+    <div id="calc-container">
+        <input type="text" id="left">
+
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+
+        <input type="text" id="right">
+
+        <input type="submit" id="btn" value="Try me!">
+    </div>
+
+    <script>
+        // Esperar a que el HTML cargue completamente
+        window.onload = function() {
+
+            // 1. Mensaje cada 30 segundos
+            setInterval(function() {
+                alert("Please, use me...");
+            }, 30000);
+
+            // 2. Lógica del botón
+            const button = document.getElementById('btn');
+            
+            button.onclick = function() {
+                const leftStr = document.getElementById('left').value.trim();
+                const rightStr = document.getElementById('right').value.trim();
+                const op = document.getElementById('operator').value;
+
+                // Validación: ¿Son solo dígitos? (Enteros positivos >= 0)
+                // Usamos una expresión regular para asegurar que no haya letras ni puntos decimales
+                const isPositiveInt = /^\d+$/;
+
+                if (!isPositiveInt.test(leftStr) || !isPositiveInt.test(rightStr)) {
+                    alert("Error :(");
+                    return;
+                }
+
+                // Convertir a números
+                const n1 = parseInt(leftStr, 10);
+                const n2 = parseInt(rightStr, 10);
+                let result;
+
+                // Caso especial: División o Módulo por cero
+                if ((op === '/' || op === '%') && n2 === 0) {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                    return;
+                }
+
+                // Operaciones
+                if (op === '+') result = n1 + n2;
+                else if (op === '-') result = n1 - n2;
+                else if (op === '*') result = n1 * n2;
+                else if (op === '/') result = n1 / n2;
+                else if (op === '%') result = n1 % n2;
+
+                // Mostrar resultado
+                console.log(result);
+                alert(result);
+            };
+        };
+    </script>
+</body>
+</html>
