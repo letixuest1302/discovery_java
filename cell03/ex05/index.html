@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List - Piscine</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 50px; }
+        #ft_list { 
+            width: 300px; 
+            border: 1px solid #000; 
+            min-height: 100px; 
+            margin-top: 20px; 
+            background: #fafafa;
+        }
+        .todo-item { 
+            padding: 15px; 
+            border-bottom: 1px solid #ccc; 
+            cursor: pointer; 
+            background: white;
+            transition: background 0.2s;
+        }
+        .todo-item:hover { background: #ffebeb; }
+        button { padding: 10px 20px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <button id="new_btn">New</button>
+
+    <div id="ft_list"></div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
