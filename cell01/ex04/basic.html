@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Básico</title>
+    <style>
+        body {
+            /* El rosa no tiene nada de malo; es un clásico */
+            background-color: #FFC0CB; 
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            /* Blanco, centrado y con carácter especial */
+            color: white;
+            text-align: center;
+            font-size: 3.5rem;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .contenedor-tiendas {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .tienda {
+            text-align: center;
+        }
+
+        .tienda img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .tienda a {
+            color: #333;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        hr {
+            /* Línea horizontal que abarca todo el ancho disponible */
+            border: 0;
+            border-top: 2px solid #333;
+            margin: 50px 0 10px 0;
+            width: 100%;
+        }
+
+        .copyright {
+            /* Derecha, cursiva y monoespaciado */
+            text-align: right;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            color: #333;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Básico !</h1>
+
+    <div class="contenedor-tiendas">
+        <div class="tienda">
+            <img src="amazon_img.jpg" alt="Tienda Amazon">
+            <a href="https://www.amazon.com" target="_blank">Ir a Amazon</a>
+        </div>
+
+        <div class="tienda">
+            <img src="ebay_img.jpg" alt="Tienda eBay">
+            <a href="https://www.ebay.com" target="_blank">Ir a eBay</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div style="text-align: right; font-family: monospace; font-style: italic;">	 
+    <div class="copyright">
+        © wil 2026
+    </div>
+
+</body>
+</html>
